@@ -1,0 +1,41 @@
+ISim log file
+Running: /home/invisiblehat/Documents/Academics/COA/lab/RISC/RISC/CS_RISC_testbench_isim_beh.exe -intstyle ise -gui -tclbatch isim.cmd -wdb /home/invisiblehat/Documents/Academics/COA/lab/RISC/RISC/CS_RISC_testbench_isim_beh.wdb 
+ISim P.20131013 (signature 0xfbc00daa)
+WARNING: A WEBPACK license was found.
+WARNING: Please use Xilinx License Configuration Manager to check out a full ISim license.
+WARNING: ISim will run in Lite mode. Please refer to the ISim documentation for more information on the differences between the Lite and the Full version.
+This is a Lite version of ISim.
+Time resolution is 1 ps
+# onerror resume
+# wave add /
+# run 1000 ns
+Simulator is doing circuit initialization process.
+ Block Memory Generator CORE Generator module loading initial data...
+ Block Memory Generator data initialization complete.
+Block Memory Generator CORE Generator module CS_RISC_testbench.uut.IC.IC.inst.\native_mem_mapped_module.blk_mem_gen_v7_3_inst  is using a behavioral model for simulation which will not precisely model memory collision behavior.
+Block Memory Generator CORE Generator module CS_RISC_testbench.uut.DC.DC.inst.\native_mem_module.blk_mem_gen_v7_3_inst  is using a behavioral model for simulation which will not precisely model memory collision behavior.
+Finished circuit initialization process.
+instruction = 00000000000000000000000000000000	, reg0 =           x	, reg1 =           x	, reg2 =           x	, reg3 =           x	, reg4 =           x	, reg5 =           x	
+instruction = 00000000000000000000000000000000	, reg0 =           0	, reg1 =           0	, reg2 =           0	, reg3 =           0	, reg4 =           0	, reg5 =           0	
+instruction = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx	, reg0 =           0	, reg1 =           0	, reg2 =           0	, reg3 =           0	, reg4 =           0	, reg5 =           0	
+instruction = 00000000000000000000000000000000	, reg0 =           0	, reg1 =           0	, reg2 =           0	, reg3 =           0	, reg4 =           0	, reg5 =           0	
+instruction = 11110000001000000000000000011110	, reg0 =           0	, reg1 =           0	, reg2 =           0	, reg3 =           0	, reg4 =           0	, reg5 =           0	
+instruction = 11110000001000000000000000011110	, reg0 =           0	, reg1 =          30	, reg2 =           0	, reg3 =           0	, reg4 =           0	, reg5 =           0	
+instruction = 11110100010000000000000000010000	, reg0 =           0	, reg1 =          30	, reg2 =           0	, reg3 =           0	, reg4 =           0	, reg5 =           0	
+instruction = 11110100010000000000000000010000	, reg0 =           0	, reg1 =          30	, reg2 =         -16	, reg3 =           0	, reg4 =           0	, reg5 =           0	
+instruction = 00000100001000100000000000000000	, reg0 =           0	, reg1 =          30	, reg2 =         -16	, reg3 =           0	, reg4 =           0	, reg5 =           0	
+instruction = 00000100001000100000000000000000	, reg0 =           0	, reg1 =          16	, reg2 =         -16	, reg3 =           0	, reg4 =           0	, reg5 =           0	
+instruction = 11110000011000000000000000011000	, reg0 =           0	, reg1 =          16	, reg2 =         -16	, reg3 =           0	, reg4 =           0	, reg5 =           0	
+instruction = 11110000011000000000000000011000	, reg0 =           0	, reg1 =          16	, reg2 =         -16	, reg3 =          24	, reg4 =           0	, reg5 =           0	
+instruction = 00001000011000010000000000000001	, reg0 =           0	, reg1 =          16	, reg2 =         -16	, reg3 =          24	, reg4 =           0	, reg5 =           0	
+instruction = 00001000011000010000000000000001	, reg0 =           0	, reg1 =          16	, reg2 =         -16	, reg3 =           0	, reg4 =           0	, reg5 =           0	
+instruction = 11110000100000000000000000011000	, reg0 =           0	, reg1 =          16	, reg2 =         -16	, reg3 =           0	, reg4 =           0	, reg5 =           0	
+instruction = 11110000100000000000000000011000	, reg0 =           0	, reg1 =          16	, reg2 =         -16	, reg3 =           0	, reg4 =          24	, reg5 =           0	
+instruction = 00001000100000010000000000000000	, reg0 =           0	, reg1 =          16	, reg2 =         -16	, reg3 =           0	, reg4 =          24	, reg5 =           0	
+instruction = 00001000100000010000000000000000	, reg0 =           0	, reg1 =          16	, reg2 =         -16	, reg3 =           0	, reg4 =     1572864	, reg5 =           0	
+instruction = 00000100101000110000000000000001	, reg0 =           0	, reg1 =          16	, reg2 =         -16	, reg3 =           0	, reg4 =     1572864	, reg5 =           0	
+instruction = 00001000101001010000000000000001	, reg0 =           0	, reg1 =          16	, reg2 =         -16	, reg3 =           0	, reg4 =     1572864	, reg5 =           0	
+instruction = 00001000100001000000000000000000	, reg0 =           0	, reg1 =          16	, reg2 =         -16	, reg3 =           0	, reg4 =     1572864	, reg5 =           0	
+instruction = 00001000100001000000000000000000	, reg0 =           0	, reg1 =          16	, reg2 =         -16	, reg3 =           0	, reg4 =           0	, reg5 =           0	
+instruction = 00000000000000000000000000000000	, reg0 =           0	, reg1 =          16	, reg2 =         -16	, reg3 =           0	, reg4 =           0	, reg5 =           0	
+# exit 0

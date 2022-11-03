@@ -1,0 +1,17 @@
+# Output products list for <Instruction_Cache>
+Instruction_Cache/blk_mem_gen_v7_3_readme.txt
+Instruction_Cache/doc/blk_mem_gen_v7_3_vinfo.html
+Instruction_Cache/doc/pg058-blk-mem-gen.pdf
+Instruction_Cache.asy
+Instruction_Cache.gise
+Instruction_Cache.mif
+Instruction_Cache.ngc
+Instruction_Cache.sym
+Instruction_Cache.v
+Instruction_Cache.veo
+Instruction_Cache.xco
+Instruction_Cache.xise
+Instruction_Cache_flist.txt
+Instruction_Cache_xmdf.tcl
+_xmsgs/pn_parser.xmsgs
+summary.log
