@@ -36,11 +36,11 @@ module ALU(
 	cla_16bit_lcu lcu1(.num1(inp1[15:0]), .num2(inp2[15:0]), .c_in(0), .ans(sum[15:0]), .c_out(carry_intermediate), .P(P1), .G(G1));
 	cla_16bit_lcu lcu2(.num1(inp1[31:16]), .num2(inp2[31:16]), .c_in(carry_intermediate), .ans(sum[31:16]), .c_out(carry_out), .P(P2), .G(G2));
 	
-	assign comp = ~inp1 + 1'b1;
+	assign comp = ~inp2 + 1'b1;
 	
 	assign AND = inp1 & inp2;
 	
-	assign OR = inp1 ^ inp2;
+	assign XOR = inp1 ^ inp2;
 	
 	wire shift_amt = ALUControl[3] ? shamt : inp2;
 	
@@ -50,7 +50,7 @@ module ALU(
 	
 	assign diff = inp1 ^ inp2; //to be changed later.
 	
-	always begin
+	always @(*) begin
 		isZero <= inp1 == 0 ? 1'b1 : 1'b0;
 		isNeg <= inp1[31] == 1'b1 ? 1'b1 : 1'b0;
 		case (ALUControl[2:0])
