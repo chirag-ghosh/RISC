@@ -2,6 +2,116 @@
   "add": {
     "itype": "r",
     "opcode": "000000",
-    "func": "000000"
+    "func": "00000"
+  },
+  "comp": {
+    "itype": "r",
+    "opcode": "000000",
+    "func": "00001"
+  },
+  "and": {
+    "itype": "r",
+    "opcode": "000001",
+    "func": "00000"
+  },
+  "xor": {
+    "itype": "r",
+    "opcode": "000001",
+    "func": "00001"
+  },
+  "shll": {
+    "itype": "r",
+    "opcode": "000010",
+    "func": "00000"
+  },
+  "shrl": {
+    "itype": "r",
+    "opcode": "000010",
+    "func": "00001"
+  },
+  "shllv": {
+    "itype": "r",
+    "opcode": "000010",
+    "func": "00010"
+  },
+  "shrlv": {
+    "itype": "r",
+    "opcode": "000010",
+    "func": "00011"
+  },
+  "shra": {
+    "itype": "r",
+    "opcode": "000010",
+    "func": "00100"
+  },
+  "shrav": {
+    "itype": "r",
+    "opcode": "000010",
+    "func": "00101"
+  },
+  "diff": {
+    "itype": "r",
+    "opcode": "000011",
+    "func": "00000"
+  },
+  "b": {
+    "itype": "b",
+    "opcode": "000100",
+    "func": "00000"
+  },
+  "br": {
+    "itype": "b",
+    "opcode": "000101",
+    "func": "00000"
+  },
+  "bltz": {
+    "itype": "b",
+    "opcode": "000101",
+    "func": "00001"
+  },
+  "bz": {
+    "itype": "b",
+    "opcode": "000101",
+    "func": "00010"
+  },
+  "bnz": {
+    "itype": "b",
+    "opcode": "000101",
+    "func": "00011"
+  },
+  "bl": {
+    "itype": "b",
+    "opcode": "000110",
+    "func": "00000"
+  },
+  "bcy": {
+    "itype": "b",
+    "opcode": "000100",
+    "func": "00001"
+  },
+  "bncy": {
+    "itype": "b",
+    "opcode": "000100",
+    "func": "00010"
+  },
+  "addi": {
+    "itype": "i",
+    "opcode": "111100",
+    "func": "00000"
+  },
+  "compi": {
+    "itype": "i",
+    "opcode": "111101",
+    "func": "00000"
+  },
+  "lw": {
+    "itype": "i",
+    "opcode": "111110",
+    "func": "00000"
+  },
+  "sw": {
+    "itype": "i",
+    "opcode": "111111",
+    "func": "00000"
   }
 }
