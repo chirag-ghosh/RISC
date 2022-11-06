@@ -80,15 +80,16 @@ func iInstr(instrName string, metadata InstrData, instruction string, regMap map
 		if err != nil {
 			fmt.Println("Bad immediate value")
 		}
-
-		instrCode = metadata.OPcode + fmt.Sprintf("%05b", regMap[arg1]) + "00000" + fmt.Sprintf("%016b", imm) 
+		i := uint16(imm)
+		instrCode = metadata.OPcode + fmt.Sprintf("%05b", regMap[arg1]) + "00000" + fmt.Sprintf("%016b", i) 
 
 	} else {
 		var reg string
 		var imm int
 		fmt.Sscanf(arg2, "%d(%s)", &imm, &reg)
 		reg = strings.Trim(reg, ")")
-		instrCode = metadata.OPcode + fmt.Sprintf("%05b", regMap[arg1]) + fmt.Sprintf("%05b", regMap[reg]) + fmt.Sprintf("%016b", imm)
+		i := uint16(imm)
+		instrCode = metadata.OPcode + fmt.Sprintf("%05b", regMap[arg1]) + fmt.Sprintf("%05b", regMap[reg]) + fmt.Sprintf("%016b", i)
 	}
 	
 	return  instrCode
