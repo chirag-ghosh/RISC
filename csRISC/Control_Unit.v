@@ -136,7 +136,7 @@ module Control_Unit(
 				reg_dst <= 2'b00;
 				reg_write <= 1'b0;
 				ALUop	<= 3'b010;
-				memory_read <= 1'b0;
+				memory_read <= 1'b1;
 				memory_write <= 1'b1;
 				branchOP <= 2'b00;
 				ALUsource <= 1'b1;
