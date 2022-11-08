@@ -25,6 +25,9 @@ module Write_Reg_Data_MUX(
 	input [1:0] PCMemReg,
 	output reg [31:0] write_reg_data
     );
+	 
+	wire [31:0] compressed_pc_data;
+	assign compressed_pc_data = pc_data >> 2;
 
 	always @(*) begin
 		case(PCMemReg)
@@ -35,7 +38,7 @@ module Write_Reg_Data_MUX(
 				write_reg_data <= mem_data;
 			end
 			2'b10: begin
-				write_reg_data <= pc_data;
+				write_reg_data <= compressed_pc_data;
 			end
 			default: write_reg_data <= alu_data;
 		endcase
