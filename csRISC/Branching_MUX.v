@@ -26,16 +26,20 @@ module Branching_MUX(
 	output reg [31:0] next_addr
     );
 	 
+	wire [31:0] actual_instr_addr, actual_reg_addr;
+	assign actual_instr_addr = instr_addr << 2;
+	assign actual_reg_addr = reg_addr << 2;
+	 
 	 always @(*) begin
 		case(branch_control_out)
 			2'b00: begin
 				next_addr <= pc_add;
 			end
 			2'b01: begin
-				next_addr <= instr_addr;
+				next_addr <= actual_instr_addr;
 			end
 			2'b10: begin
-				next_addr <= reg_addr;
+				next_addr <= actual_reg_addr;
 			end
 			default: next_addr <= pc_add;
 		endcase
