@@ -31,10 +31,10 @@ module Write_Reg_MUX(
 				reg_write <= rs;
 			end
 			2'b01: begin
-				reg_write <= rt;
+				reg_write <= 5'd31;
 			end
 			2'b10: begin
-				reg_write <= 5'd31;
+				reg_write <= rt;
 			end
 			default: reg_write <= rs;
 		endcase

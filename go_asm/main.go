@@ -89,7 +89,7 @@ func iInstr(instrName string, metadata InstrData, instruction string, regMap map
 		fmt.Sscanf(arg2, "%d(%s)", &imm, &reg)
 		reg = strings.Trim(reg, ")")
 		i := uint16(imm)
-		instrCode = metadata.OPcode + fmt.Sprintf("%05b", regMap[arg1]) + fmt.Sprintf("%05b", regMap[reg]) + fmt.Sprintf("%016b", i)
+		instrCode = metadata.OPcode + fmt.Sprintf("%05b", regMap[reg]) + fmt.Sprintf("%05b", regMap[arg1]) + fmt.Sprintf("%016b", i)
 	}
 	
 	return  instrCode
