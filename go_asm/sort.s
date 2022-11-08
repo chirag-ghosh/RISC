@@ -1,20 +1,28 @@
 xor $2, $2
 addi $1, 4
 sw $1, 0($2)
+xor $1, $1
 addi $1, 2
 sw $1, 4($2)
+xor $1, $1
 addi $1, 9
 sw $1, 8($2)
+xor $1, $1
 addi $1, 6
 sw $1, 12($2)
+xor $1, $1
 addi $1, 16
 sw $1, 16($2)
+xor $1, $1
 addi $1, 3
 sw $1, 20($2)
+xor $1, $1
 addi $1, 60
 sw $1, 24($2)
+xor $1, $1
 addi $1, 5
 sw $1, 28($2)
+xor $1, $1
 addi $1, 1
 sw $1, 32($2)
 xor $15, $15
@@ -27,8 +35,8 @@ comp $7, $6
 xor $8, $8
 add $8, $5   
 add $8, $7  
-bltz $8, 32      
-b 35
+bltz $8, 40      
+b 43
 sw $5, ($2)     
 sw $6, 4($2)
 addi $4, 1
@@ -37,10 +45,10 @@ addi $2, 4
 xor $9, $9
 add $9, $3                  
 add $9, -8
-bltz $9, 24  
+bltz $9, 32  
 xor $9, $9
 comp $9, $4
-bltz $9, 22      
+bltz $9, 30      
 xor $11, $11
 addi $10, 4092
 sw $15, 0($10)
@@ -50,5 +58,5 @@ addi $11, 1
 xor $12, $12
 add $12, $11                 
 add $12, -8
-bltz $12, 46   
+bltz $12, 54   
 
