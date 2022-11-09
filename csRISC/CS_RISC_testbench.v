@@ -38,7 +38,7 @@ module CS_RISC_testbench;
 
 	initial begin
 	
-		$monitor("line: %d\t, instruction = %b\t, reg0 = %d\t, reg1 = %d\t, reg2 = %d\t, reg3 = %d\t, reg4 = %d\t, reg5 = %d\t, reg6 = %d\t, reg7 = %d\t, reg8 = %d\t, reg20 = %d",
+		$monitor("line: %d\t, instruction = %b\t, reg0 = %d\t, reg1 = %d\t, reg2 = %d\t, reg3 = %d\t, reg4 = %d\t, reg5 = %d\t, reg6 = %d\t, reg7 = %d\t, reg8 = %d\t, reg9 = %d\t, reg20 = %d",
 				(uut.pc/4),
 				uut.instruction,
 				$signed(uut.RB.r[0]), 
@@ -50,6 +50,7 @@ module CS_RISC_testbench;
 				$signed(uut.RB.r[6]),
 				$signed(uut.RB.r[7]),
 				$signed(uut.RB.r[8]),
+				$signed(uut.RB.r[9]),
 				$signed(uut.RB.r[20]));
 		// Initialize Inputs
 		clk = 0;

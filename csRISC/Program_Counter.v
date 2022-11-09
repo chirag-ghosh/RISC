@@ -25,7 +25,7 @@ module Program_Counter(
    output reg [31:0] PC_output
     );
 	
-	always @(posedge clock) begin
+	always @(negedge clock) begin
 		if(reset) PC_output <= 0;
 		else PC_output <= PC_input;
 	end
