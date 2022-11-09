@@ -76,6 +76,6 @@ module Reg_Bank(
 
 	assign reg_data2 = r[reg2_address];
 	
-	assign program_done = r[5'd30][0];
+	assign program_done = r[30][0];
 
 endmodule
