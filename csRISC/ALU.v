@@ -24,7 +24,7 @@ module ALU(
 	input [4:0] shamt,
 	input [3:0] ALUControl,
 	output reg [31:0] out,
-	output reg carry_out,
+	output carry_out,
 	output reg isNeg,
 	output reg isZero
     );

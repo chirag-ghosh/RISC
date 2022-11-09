@@ -20,7 +20,11 @@
 //////////////////////////////////////////////////////////////////////////////////
 module CS_RISC(
 	input clk,
-	input reset
+	input reset,
+	input address_mode,
+	input [31:0] fpga_address,
+	output [31:0] fpga_value,
+	output program_done
     );
 	 
 	wire [31:0] pc, pc_next;
@@ -35,7 +39,7 @@ module CS_RISC(
 
 	wire regwrite;
 	wire [31:0] write_reg_data, reg_data1, reg_data2;
-	Reg_Bank RB(.clk(clk), .reset(reset), .reg1_address(instruction[25:21]), .reg2_address(instruction[20:16]), .write_register(write_register), .RegWrite(regwrite), .write_data(write_reg_data), .reg_data1(reg_data1), .reg_data2(reg_data2));
+	Reg_Bank RB(.clk(clk), .reset(reset), .reg1_address(instruction[25:21]), .reg2_address(instruction[20:16]), .write_register(write_register), .RegWrite(regwrite), .write_data(write_reg_data), .reg_data1(reg_data1), .reg_data2(reg_data2), .program_done(program_done));
 	
 	wire [31:0] immediate;
 	wire ALUsource;
@@ -48,9 +52,14 @@ module CS_RISC(
 	wire carry_out, isNeg, isZero;
 	ALU alu(.inp1(reg_data1), .inp2(alu_input2), .shamt(instruction[15:11]), .ALUControl(ALUControl), .out(alu_out), .carry_out(carry_out), .isNeg(isNeg), .isZero(isZero));
 	
+	//for fpga
+	wire [31:0] real_address;
+	assign real_address = address_mode ? fpga_address : alu_out;
+	
 	wire MemRead, MemWrite;
 	wire [31:0] mem_data;
-	Data_Cache_Wrapper DC(.clk(clk), .enable(MemRead), .write_enable(MemWrite), .address(alu_out), .input_data(reg_data2), .output_data(mem_data));
+	Data_Cache_Wrapper DC(.clk(clk), .enable(address_mode ? 1'b1 : MemRead), .write_enable(MemWrite), .address(real_address), .input_data(reg_data2), .output_data(mem_data));
+	assign fpga_value = mem_data;
 	
 	wire [31:0] pc_add;
 	wire [1:0] PCMemReg;

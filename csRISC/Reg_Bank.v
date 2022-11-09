@@ -27,7 +27,8 @@ module Reg_Bank(
 	input RegWrite,
    input [31:0] write_data,
    output [31:0] reg_data1,
-   output [31:0] reg_data2			
+   output [31:0] reg_data2,
+	output program_done
 		);
 	
 	reg [31:0] r[31:0]; 	// 32 registers of 32 bits
@@ -74,5 +75,7 @@ module Reg_Bank(
 	assign reg_data1 = r[reg1_address];
 
 	assign reg_data2 = r[reg2_address];
+	
+	assign program_done = r[5'd30][0];
 
 endmodule
