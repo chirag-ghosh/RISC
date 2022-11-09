@@ -29,7 +29,7 @@ module ALU(
 	output reg isZero
     );
 	 
-	wire [31:0] sum, comp, AND, XOR, sll, srl, sra, diff;
+	wire [31:0] sum, comp, AND, XOR, sll, srl, sra, diff_value;
 	
 	//add
 	wire P1, G1, P2, G2, carry_intermediate;
@@ -48,7 +48,7 @@ module ALU(
 	assign srl = inp1 >> shift_amt;
 	assign sra = inp1 >>> shift_amt;
 	
-	assign diff = inp1 ^ inp2; //to be changed later.
+	diff df(.inp1(inp1), .inp2(inp2), .out(diff_value));
 	
 	always @(*) begin
 		isZero <= inp1 == 0 ? 1'b1 : 1'b0;
@@ -76,7 +76,7 @@ module ALU(
 				out <= sra;
 				end
 			3'b111: begin
-				out <= diff;
+				out <= diff_value;
 				end
 		endcase
 	end
