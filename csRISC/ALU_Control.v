@@ -26,6 +26,9 @@ module ALU_Control(
 	always @(*) begin
 		case (ALUop)
 			3'b000: begin
+				ALU_control_output <= 4'b0000;
+			end
+			3'b001: begin
 					case (func)
 						3'b00000: begin
 							ALU_control_output <= 4'b0000;
